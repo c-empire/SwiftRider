@@ -1,0 +1,19 @@
+Entities:
+
+User (id, username, email, passwordHash, role)
+
+DeliveryRequest (id, customerId -> User, riderId -> User, pickupLocation (string), dropoffLocation, packageDetails, cost, status, timestamps)
+
+Payment (id, deliveryId -> DeliveryRequest, customerId -> User, amount, status, transactionId)
+
+RiderLocation (id, riderId -> User, lat, lng, updatedAt)
+
+Relationships:
+
+User (1) --- (M) DeliveryRequest (customer)
+
+User (1) --- (M) DeliveryRequest (rider)
+
+DeliveryRequest (1) --- (1) Payment
+
+User (1) --- (1 latest) RiderLocation (or M for history)

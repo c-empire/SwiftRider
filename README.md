@@ -86,4 +86,13 @@ All protected routes require JWT Bearer Token.
 ### Payments
 - **POST** `/payments/` → Make payment (customer only)  
 
+Postman Collection (For QA/Testers)
+
+Open Postman → Create requests for all endpoints (/auth, /deliveries, /admin, /riders, /payments).
+
+Save them in a SwiftRider API Collection.
+
+Export JSON → Include it in your repo (docs/SwiftRider.postman_collection.json).
+
+Add usage instructions in README.
 

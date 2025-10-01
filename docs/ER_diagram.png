@@ -1,0 +1,5 @@
+erDiagram
+  USER ||--o{ DELIVERYREQUEST : places
+  USER ||--o{ DELIVERYREQUEST : accepts
+  DELIVERYREQUEST ||--|| PAYMENT : "has"
+  USER ||--o{ RIDERLOCATION : updates
